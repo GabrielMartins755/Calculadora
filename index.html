@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
-    <div class="calculadora">
-        <input type="text" id="ecran" disabled placeholder="0">
+    <div class="calc-box">
+        <input type="text" id="visor" disabled placeholder="0">
 
-        <div class="botoes">
-            <button onclick="limparEcran()" class="btn-especial">C</button>
-            <button onclick="adicionarAoEcran('/')" class="btn-operador">/</button>
-            <button onclick="adicionarAoEcran('*')" class="btn-operador">*</button>
-            <button onclick="adicionarAoEcran('-')" class="btn-operador">-</button>
-            <button onclick="adicionarAoEcran('%')" class="btn-operador">%</button>
+        <div class="grid-botoes">
+            <button onclick="limparVisor()" class="btn-limpar-tudo">C</button>
+            <button onclick="apagarUltimo()" style="background-color: #d35400; color: white;">⌫</button>
+            <button onclick="calcularRaiz()">√</button>
+            <button onclick="calcularLog()">log</button>
 
-            <button onclick="adicionarAoEcran('7')">7</button>
-            <button onclick="adicionarAoEcran('8')">8</button>
-            <button onclick="adicionarAoEcran('9')">9</button>
-            <button onclick="adicionarAoEcran('+')" class="btn-operador">+</button>
-            <button onclick="adicionarAoEcran('**')" class="btn-operador">xʸ</button>
+            <button onclick="adicionarAoVisor('%')">%</button>
+            <button onclick="adicionarAoVisor('/')">/</button>
+            <button onclick="adicionarAoVisor('*')">*</button>
+            <button onclick="adicionarAoVisor('-')">-</button>
 
-            <button onclick="adicionarAoEcran('4')">4</button>
-            <button onclick="adicionarAoEcran('5')">5</button>
-            <button onclick="adicionarAoEcran('6')">6</button>
-            <button onclick="calcularRaiz()" class="btn-operador">√</button>
-            <button onclick="calcularLog()" class="btn-operador">log</button>
+            <button onclick="adicionarAoVisor('7')">7</button>
+            <button onclick="adicionarAoVisor('8')">8</button>
+            <button onclick="adicionarAoVisor('9')">9</button>
+            <button onclick="adicionarAoVisor('+')">+</button>
 
-            <button onclick="adicionarAoEcran('1')">1</button>
-            <button onclick="adicionarAoEcran('2')">2</button>
-            <button onclick="adicionarAoEcran('3')">3</button>
-            <button onclick="calcular()" class="btn-igual">=</button>
-            
-            <button onclick="adicionarAoEcran('0')" class="btn-zero">0</button>
-            <button onclick="adicionarAoEcran('.')">.</button>
+            <button onclick="adicionarAoVisor('4')">4</button>
+            <button onclick="adicionarAoVisor('5')">5</button>
+            <button onclick="adicionarAoVisor('6')">6</button>
+            <button onclick="adicionarAoVisor('**')">xʸ</button>
+
+            <button onclick="adicionarAoVisor('1')">1</button>
+            <button onclick="adicionarAoVisor('2')">2</button>
+            <button onclick="adicionarAoVisor('3')">3</button>
+            <button onclick="calcular()" class="btn-operacao-igual">=</button>
+
+            <button onclick="adicionarAoVisor('0')" class="btn-zero-largo">0</button>
+            <button onclick="adicionarAoVisor('.')">.</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
